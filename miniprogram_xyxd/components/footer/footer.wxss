@@ -1,0 +1,9 @@
+/* components/footer/footer.wxss */
+view {
+  padding: 0;
+  margin: 0;
+}
+image {
+  width: 100%;
+  margin-bottom: bottom;
+}

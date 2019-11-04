@@ -1,0 +1,27 @@
+<!--顶部搜索栏-->
+<van-search value="{{ value }}" placeholder="请输入要搜索的老师工号" shape="round" use-action-slot bind:search="onSearch" bind:change="change">
+  <view slot="action" bind:tap="onSearch" >搜索</view>
+</van-search>
+<!--学院信息-->              
+<van-collapse value="{{ activeName }}" bind:change="kindToggle" accordion>
+  <view wx:for="{{TeacherList}}" wx:key="item-id" >
+    <van-collapse-item title="{{item.name}}">
+      <view wx:for-items="{{item.teachers}}" wx:for-item="teacher" wx:key="*item">
+        <van-cell title="{{teacher.tchName}}" bind:click="goToItem" data-id="{{teacher.teacherID}}"/>
+      </view>
+    </van-collapse-item>
+  </view>
+</van-collapse>
+<text>\n</text><text>\n</text>
+<!--底部导航-->
+<van-tabbar active="{{ active }}" active-color="#07c160" inactive-color="#000" bind:change="onChange">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="orders-o">导师列表</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">开始选导</van-tabbar-item>
+  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+</van-tabbar>
+
+
+
+
+

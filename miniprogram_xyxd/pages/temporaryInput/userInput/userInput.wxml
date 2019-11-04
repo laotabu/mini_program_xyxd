@@ -1,0 +1,49 @@
+<view class="main">
+  <view wx:if="{{ status==0 }}" class="form-box">
+    <form bindsubmit="submit">
+      <van-field name="name" value="{{ name }}" label="姓名" placeholder="请输入姓名" />
+      <van-field name="id" value="{{ studentID }}" label="学号" placeholder="请输入学号" />
+      <van-cell id="sex" name="sex" title="性别" value="{{ sex }}" is-link bind:click="showPopup" />
+      <van-popup id="sex" show="{{ show }}" bind:close="onClose" position="bottom">
+        <van-picker id="sex" title="性别" columns="{{ sexColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <van-cell id="campus" name="campus" title="校区" value="{{ campus }}" is-link bind:click="showPopup" />
+      <van-popup id="campus" show="{{ show_campus }}" bind:close="onClose" position="bottom">
+        <van-picker id="campus" title="校区" columns="{{ campusColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <van-cell id="college" name="college" title="院系" value="{{ college }}" is-link bind:click="showPopup" />
+      <van-popup id="college" show="{{ show_college }}" bind:close="onClose" position="bottom">
+        <van-picker id="college" title="院系" columns="{{ collegeColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+
+      <!-- <van-field name="major" value="{{ major }}" label="专业" placeholder="请输入所处专业" /> -->
+     <van-cell id="major" name="major" title="专业" value="{{ major }}" is-link bind:click="showPopup" />
+      <van-popup id="major" show="{{ show_major }}" bind:close="onClose" position="bottom">
+        <van-picker id="major" title="专业" columns="{{ majorColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+
+      <button class="sub-button" form-type="submit" type="primary" size="large">提交</button>
+    </form>
+  </view>
+  <view wx:else class="form-box">
+    <form bindsubmit="submit">
+      <van-field name="name" value="{{ name }}" label="姓名" placeholder="请输入姓名" />
+      <van-field name="id" value="{{ studentID }}" label="工号" placeholder="请输入工号" />
+      <van-cell id="sex" name="sex" title="性别" value="{{ sex }}" is-link bind:click="showPopup" />
+      <van-popup id="sex" show="{{ show }}" bind:close="onClose" position="bottom">
+        <van-picker id="sex" title="性别" columns="{{ sexColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <van-cell id="campus" name="campus" title="校区" value="{{ campus }}" is-link bind:click="showPopup" />
+      <van-popup id="campus" show="{{ show_campus }}" bind:close="onClose" position="bottom">
+        <van-picker id="campus" title="校区" columns="{{ campusColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <van-cell id="college" name="college" title="院系" value="{{ college }}" is-link bind:click="showPopup" />
+      <van-popup id="college" show="{{ show_college }}" bind:close="onClose" position="bottom">
+        <van-picker id="college" title="院系" columns="{{ collegeColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <van-field name="major" value="{{ major }}" label="研究方向" placeholder="请输入研究方向" />
+      <van-field name="introduction" value="{{ introduction }}" label="简介" type="textarea" placeholder="请输入个人简介" autosize border="{{ false }}" />
+      <button class="sub-button" form-type="submit" type="primary" size="large">提交</button>
+    </form>
+  </view>
+</view>

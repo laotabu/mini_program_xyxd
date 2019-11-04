@@ -1,0 +1,5 @@
+<!--components/footer/footer.wxml-->
+<view>
+  <image src='../../static/images/DGUT.png'>
+  </image>
+</view>

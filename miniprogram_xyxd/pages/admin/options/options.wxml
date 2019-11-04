@@ -1,0 +1,87 @@
+<view class="main">
+  <form bindsubmit="adminQuery">
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">输入老师工号查询：</view>
+
+      <view class="text-right ">
+        <input type="text" name="teacherID" value="" />
+      </view>
+
+
+    </view>
+    <button form-type="submit">查询</button>
+  </form>
+
+  <form bindsubmit="adminAdd">
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">输入老师工号为老师增加学生：</view>
+      <view class="text-right ">
+        <input type="text" name="teacherID" value="" />
+      </view>
+    </view>
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">输入老师姓名：</view>
+      <view class="text-right ">
+        <input type="text" name="tchName" value="" />
+      </view>
+    </view>
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">增加的学生的学号：</view>
+      <view class="text-right ">
+        <input type="text" name="studentID" value="" />
+      </view>
+    </view>
+
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">学生姓名：</view>
+      <view class="text-right ">
+        <input type="text" name="stuName" value="" />
+      </view>
+    </view>
+
+    <button form-type="submit">增加</button>
+  </form>
+
+  <form bindsubmit="adminDelete">
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">输入老师工号删除：</view>
+
+      <view class="text-right ">
+        <input type="text" name="teacherID" value="" />
+      </view>
+
+
+    </view>
+    <button form-type="submit">为老师删除一个学生</button>
+  </form>
+
+  <form bindsubmit="adminModify">
+
+    <view class="wa-row" bindtap="sayHi">
+
+      <view class="text-left">输入老师工号修改：</view>
+
+      <view class="text-right ">
+        <input type="text" name="teacherID" value="" />
+      </view>
+
+
+    </view>
+    <button form-type="submit">修改选导名单</button>
+  </form>
+
+
+  <form bindsubmit="adminMini">
+    <view class="wa-row" bindtap="sayHi">
+      <view >小程序系统状态管理</view>
+    </view>
+    <button form-type="submit">管理</button>
+  </form>
+
+</view>

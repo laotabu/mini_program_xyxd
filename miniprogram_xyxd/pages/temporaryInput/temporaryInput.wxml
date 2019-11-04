@@ -1,0 +1,23 @@
+<view class="console_button">
+  <view bindtap='stuInput' class="console_button_item" hover-class='ui-share-hover'>
+    <image src='../../static/images/modify2.png'></image>
+    <view class="menus_title">
+      <text>学生入口</text>
+    </view>
+  </view>
+
+
+    <view bindtap='tchInput' class="console_button_item" hover-class='ui-share-hover' >
+    <image src='../../static/images/result2.png'></image>
+    <view class="menus_title">
+      <text>教师入口</text>
+    </view>
+  </view>
+
+      <view bindtap='admin' class="console_button_item" hover-class='ui-share-hover' >
+    <image src='../../static/images/result2.png'></image>
+    <view class="menus_title">
+      <text>管理员入口</text>
+    </view>
+  </view>
+</view>

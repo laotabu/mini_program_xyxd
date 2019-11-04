@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/myInformation/myInformation",
+    "pages/tutorInformation/tutorInformation",
+    "pages/tutorInformation/tutorItem/tutorItem",
+    "pages/modify/modify",
+    "pages/chooseTutor/checkUser/checkUser",
+    "pages/chooseTutor/chooseTutor",
+    "pages/result/result",
+    "pages/admin/admin",
+    "pages/temporaryInput/temporaryInput",
+    "pages/temporaryInput/userInput/userInput"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6bbb37",
+    "navigationBarTitleText": "学业选导",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#008833"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tutorInformation/tutorInformation",
+        "text": "导师信息"
+      },
+      {
+        "pagePath": "pages/chooseTutor/checkUser/checkUser",
+        "text": "选导"
+      },
+      {
+        "pagePath": "pages/myInformation/myInformation",
+        "text": "用户"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-tabbar": "miniprogram_npm/vant-weapp/tabbar/index",
+    "van-tabbar-item": "miniprogram_npm/vant-weapp/tabbar-item/index",
+    "van-cell": "miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "miniprogram_npm/vant-weapp/cell-group/index",
+    "van-search": "miniprogram_npm/vant-weapp/search/index",
+    "van-collapse": "miniprogram_npm/vant-weapp/collapse/index",
+    "van-collapse-item": "miniprogram_npm/vant-weapp/collapse-item/index",
+    "van-row": "miniprogram_npm/vant-weapp/row/index",
+    "van-col": "miniprogram_npm/vant-weapp/col/index",
+    "van-field": "miniprogram_npm/vant-weapp/field/index",
+    "van-radio": "miniprogram_npm/vant-weapp/radio/index",
+    "van-radio-group": "miniprogram_npm/vant-weapp/radio-group/index",
+    "van-tree-select": "miniprogram_npm/vant-weapp/tree-select/index",
+    "van-picker": "miniprogram_npm/vant-weapp/picker/index",
+    "van-popup": "miniprogram_npm/vant-weapp/popup/index"
+  },
+  "cloud": true
+}

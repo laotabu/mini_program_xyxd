@@ -1,0 +1,63 @@
+
+<view class="top-mode">
+  <view class='userinfo'>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    <label style="color:white">{{userInfo.nickName}}</label>
+  </view>
+</view>
+
+<view class='card-box'>
+  <view class='card-info' wx:if="{{flag==0}}">
+    <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+      <label>我选择的老师名字：</label>
+    </view>
+    <view wx:for="{{tempResult}}" data-index="{{index}}">
+      <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+        <label>{{tempResult[index]}}</label>
+      </view>
+    </view>
+  </view>
+
+  <view class='card-info' wx:if="{{flag==1}}">
+    <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+      <label>我被哪些学生选择作为老师：</label>
+    </view>
+     <scroll-view scroll-y="true" style="height: 200px">
+    <view wx:for="{{tempResult}}" data-index="{{index}}">
+      <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+        <label>{{tempResult[index]}}</label>
+      </view>
+  </view>
+  </scroll-view>
+</view>
+
+</view>
+
+<view class="console_button">
+  <view bindtap='modify' class="console_button_item" hover-class='ui-share-hover'>
+    <image src='../../static/images/modify2.png'></image>
+    <view class="menus_title">
+      <text>信息修改</text>
+    </view>
+  </view>
+  <view bindtap='result' class="console_button_item" hover-class='ui-share-hover' >
+    <image src='../../static/images/result2.png'></image>
+    <view class="menus_title">
+      <text>选导结果</text>
+    </view>
+  </view>
+
+    <view bindtap='admin' class="console_button_item" hover-class='ui-share-hover' >
+    <image src='../../static/images/result2.png'></image>
+    <view class="menus_title">
+      <text>管理员</text>
+    </view>
+  </view>
+</view>
+<!--底部导航-->
+<van-tabbar active="{{ active }}" active-color="#07c160" inactive-color="#000" bind:change="onChange">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="orders-o">导师列表</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">开始选导</van-tabbar-item>
+  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+</van-tabbar>

@@ -1,0 +1,74 @@
+/* pages/modify/modify.wxss */
+
+page{
+    /* background-color: #008833; */
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+    font-size: 32rpx;
+}
+.text-left{
+  width:50%;
+}
+
+.text-right{
+  width: 50%;
+  color: #CCCCCC;
+}
+
+.wa-row{
+  display: flex;
+  padding: 5%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family:"微软雅黑";
+  border-bottom: 1px solid #d6d6d6;
+
+}
+
+.main block {
+  text-align: center;
+  
+}
+.navigator-hover{
+    background: none;
+}
+.form-box{
+    padding-left: 15rpx;
+    margin-top: 5%;
+}
+
+.form-box .menus_title  {
+  color: #ffff;
+  font-family:"微软雅黑";
+  font-weight:bolder;
+  line-height: 20rpx;
+  padding: 32rpx 16rpx,0,16rpx;
+  font-size: 22rpx;
+  margin-top: 60rpx;
+  overflow: hidden; /*自动隐藏文字*/
+  text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+}
+ 
+.form-box input{
+    height: 90rpx;
+    border-bottom: 1rpx solid #ededed;
+    color: #999;
+}
+            
+.form-box textarea{
+  margin: 20rpx auto;
+  width: 95%;
+  border: 1rpx solid #ededed;
+  color: #999;
+}
+.form-box .input-placeholder{
+  color: #aaa;
+}
+
+
+.modifyBtn{
+  margin-left: 5%;
+  margin-top: 5%; 
+  width: 90%;
+  color: #63B8FF;
+
+}

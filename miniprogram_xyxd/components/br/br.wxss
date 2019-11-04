@@ -1,0 +1,6 @@
+/* components/br/br.wxss */
+
+.br{
+
+  height: 20rpx;
+}

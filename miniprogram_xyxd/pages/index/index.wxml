@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class='ui-share-hover'> 
+      <image class="" src='../../static/images/authorize.png'></image>
+      <view>授权</view>
+     </button>
+  </view>
+</view>

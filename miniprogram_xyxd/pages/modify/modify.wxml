@@ -1,0 +1,30 @@
+
+<view wx:if="{{status==0}}" class="form-box">
+<van-cell title="学生界面" />
+<van-cell title="姓名" id="stuName" is-link value="{{user.stuName}}"  bind:click="goToModify" />
+<van-cell title="学号" id="studentID" value="{{user.studentID}}" is-link bind:click="goToModify" />
+<van-cell title="校区" id="campus" value="{{user.campus}}"  is-link bind:click="goToModify" />
+<van-cell title="院系" id="college" value="{{user.college}}"  is-link bind:click="goToModify" />
+<van-cell title="专业" id="major" value="{{user.major}}"  is-link bind:click="goToModify" />
+<van-cell title="性别"  value="{{user.stuSex}}"  id="stuSex" value="{{user.stuSex}}" bind:click="goToModify" is-link />
+<text>\n</text>
+<text>\n</text>
+<van-cell title="更多信息" is-link />
+ </view>
+
+
+<view wx:else class="form-box">
+<van-cell title="导师界面" />
+<van-cell title="姓名"id="tchName" is-link value="{{user.tchName}}" bind:click="goToModify" />
+<van-cell title="工号" id="teacherID" value="{{user.teacherID}}" is-link  bind:click="goToModify"/>
+<van-cell title="研究方向" id="reDirection" value="{{user.reDirection}}" is-link  bind:click="goToModify"/>
+<van-cell title="学院" id="college" value="{{user.college}}" is-link  bind:click="goToModify"/>
+<van-cell title="性别" id="tchSex" value="{{user.tchSex}}" is-link  bind:click="goToModify"/>
+<van-cell title="校区" id="campus" value="{{user.campus}}" is-link  bind:click="goToModify" />
+<van-cell title="老师简介" id="introduction" value="{{user.introduction}}" is-link  bind:click="goToModify" />
+<text>\n</text>
+<text>\n</text>
+<van-cell title="更多信息" is-link /> 
+
+
+ </view>

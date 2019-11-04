@@ -1,0 +1,42 @@
+
+
+.console_button{
+  height: 60px;
+  display:flex;
+  background-color: #FFFFFF;
+  margin-top: 45%;
+  
+}
+
+.console_button .console_button_item {
+    width: 50%;
+    height: 60px;
+    color: #000;
+    padding-top:8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+.console_button .console_button_item image {
+  width:23px;
+  height:23px;
+}
+.console_button .console_button_item .menus_title {
+  display: block;
+}
+.console_button .console_button_item .menus_title text {
+  font-size:13px;
+}
+
+.ui-share-hover {
+  /*
+    点击后缩放
+  */
+  transform: scale(0.9,0.9);
+}
+
+
+
+
+

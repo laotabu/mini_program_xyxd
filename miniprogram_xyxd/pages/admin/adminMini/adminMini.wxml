@@ -1,0 +1,16 @@
+<view class="main">
+  <form bindsubmit="adminMiniInputInformation">
+    <button form-type="submit">修改选导状态</button>
+  </form>
+<form bindsubmit="adminMiniResultDisplay">
+    <button form-type="submit">是否选导结束</button>
+  </form>
+
+<form bindsubmit="miniCreateStuAndTch">
+    <button form-type="submit">生成select_dgut_stu/tch</button>
+  </form>
+
+  
+    <button bindtap="eliminateDuplicates">消除select_dgut_tch学生的重复项</button>
+  
+</view>

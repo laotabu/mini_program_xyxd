@@ -1,0 +1,29 @@
+<!--pages/result/result.wxml-->
+<view class='card-box'>
+
+
+  <view class='details' style='border-bottom:1px solid #E3E3E3;margin-top: 200rpx;margin-bottom: : 200rpx;'>
+    <label style=''>被哪些学生选择作为老师：</label>
+    
+  </view>
+    
+  <scroll-view scroll-y="true" style="height: 250px">
+    
+      <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+     <view wx:for="{{student}}" data-index="{{index}}">
+  <form bindsubmit="adminModify">
+   <!-- <input type="text" name="teacherID" value="{{teacherID}}"  maxlength='20' disabled="disabled" /> -->
+ 要修改的学生学号：  <input type="text" name="studentID" value="{{student[index].studentID}}"  maxlength='20'  disabled="disabled"/>
+      <input type="text" name="studentID2" value="{{student[index].studentID}}"  maxlength='20'  />
+       <input type="text" name="studentName" value="{{student[index].studentName}}"  maxlength='30'  />
+    <button form-type="submit">修改</button>
+       </form>
+</view>
+      </view>
+     
+       
+   
+  </scroll-view>
+   
+<!-- </form> -->
+</view>

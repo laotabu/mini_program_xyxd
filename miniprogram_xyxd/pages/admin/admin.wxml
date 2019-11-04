@@ -1,0 +1,21 @@
+<view class="main">
+<form bindsubmit="login">
+ <view class="wa-row" bindtap="sayHi">
+  <view class="text-left">管理员账号：</view>
+  <view class="text-right ">
+    <input type="text" name="account" value="" />
+  </view>
+  
+  </view>
+  <view class="wa-row" bindtap="sayHi">
+  <view class="text-left">管理员账号密码：</view>
+  <view class="text-right ">
+    <input type="password" name="password" value="" />
+  </view>
+   </view>
+
+  <button form-type="submit">登录</button>
+
+</form>
+
+</view>

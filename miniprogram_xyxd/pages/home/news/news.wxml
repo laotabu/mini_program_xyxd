@@ -1,0 +1,9 @@
+<view class="pages">
+<view class="title">{{news.title}}</view>
+<block wx:if="{{isPlay}}">
+<view><image src="{{news.picture}}"  mode='aspectFill' class="picture"></image></view>
+</block>
+<view class="date">{{news.date}}</view>
+<view class="content">{{news.content}}</view>
+<view class="viewers">阅读数： {{news.viewers}}</view>
+</view>

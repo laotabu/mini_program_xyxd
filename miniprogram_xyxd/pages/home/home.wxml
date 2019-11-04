@@ -1,0 +1,34 @@
+<swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true" style="height:36%">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="home-images" mode='aspectFill' style='width:100% ' />
+    </swiper-item>
+  </block>
+</swiper>
+   
+<!-- 校内新闻信息框-->
+<!-- 三栏布局：左、上、下-->
+ <view class='contentRightTopButtom' wx:for="{{news}}" wx:key="_id"  bindtap="bindNews"
+ data-id='{{item._id}}'>
+  <view class='itemSize '>
+  <image src="../../static/images/DGUT.png"  mode='aspectFill' class="picture"></image>
+  </view>
+  <view class='contentTopButtom'>
+    <view class='itemSize'><text>{{item.title}}</text></view>
+    <view class='itemSizes'>{{item.author}}<text decode='{{true}}'>&nbsp;&nbsp;{{item.releaseTime}}&nbsp;&nbsp;</text></view>
+  </view> 
+</view>
+<!--数据提示-->
+<view class='tips'>
+<view wx:if="{{hasMore}}"><text>下拉加载更多</text></view> 
+    <view wx:else><text>没有更多内容了</text></view>
+
+</view>
+<text>\n</text><text>\n</text>
+<!-- 底部导航栏 -->
+<van-tabbar active="{{ active }}" active-color="#07c160" inactive-color="#000" bind:change="onChange" custom-class='vtabbar'>
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="orders-o">导师列表</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">开始选导</van-tabbar-item>
+  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+</van-tabbar>

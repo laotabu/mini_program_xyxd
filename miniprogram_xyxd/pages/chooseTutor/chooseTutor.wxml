@@ -1,0 +1,51 @@
+<view >
+<view class="showInfo">
+<text class="item1">欢 迎 进 入 选 导\n\n</text>
+</view>
+<!-- 左侧选项 -->
+<view class="list-left-menu">
+    <view wx:for="{{tutorRank}}" wx:key="unique" wx:for-index="index" data-index="{{index}}" class="{{index==activeIndex?'list-left-menu-box-selected':'list-left-menu-box-unselect'}}" bindtap='selectRank'>
+      <view class="list-menu-name ">{{item.name}}</view>
+    </view>
+</view>
+<!-- 右侧滑窗 -->
+<scroll-view scroll-y="true" style='height:557rpx;'>
+     <view class="content"  wx:for="{{teacher}}" wx:key="unique">
+      <view class='list-tab'>教师：{{item.tchName}}</view>
+      <view class='content-list'>
+        <view class='list-image-box'>
+          <image class="list-image" mode="widthFix" src="{{item.image_url}}"></image>
+        </view>
+        <view class="detail">
+          <text class="text1">学工号：{{item.teacherID}}\n</text>
+          <text class="text1">研究方向：{{item.reDirection}}</text>
+        </view >
+        <view class="checkboxcs">
+          <checkbox-group bindchange="checkboxChange" >
+          <checkbox checked="{{item.checked}}" value="{{item.teacherID}}" />
+          </checkbox-group>
+        </view>
+        </view>
+     </view>
+</scroll-view>
+<!--结果显示栏-->
+<view class="showChose">
+<text >选择结果：</text>
+<view class="showResult" wx:for="{{result}}" wx:key="unique" wx:for-index="i">
+<text>{{item.rank}}：{{item.id}}\t\t\t\t{{item.name}}</text>
+</view>
+</view>
+<view style="height:20px"></view><view style="height:20px"></view><view style="height:20px"></view>
+<!--底部菜单栏-->
+<view class="operate-bar" wx:if="{{loading}}" style="position:fixed; bottom:0;width: 750rpx" >
+    <view class='gouwuche'>
+      <view style='padding:5px;display:flex'>
+        <view class='bottomcs'  wx:if="{{empty}}">您还未选择导师</view>
+        <view class='bottomcs'wx:else>请仔细检查选择结果再提交</view>
+      </view>
+    </view>
+    <view class="submit-btn" bindtap='submitData' hover-class="submit-btn-click">
+      <view class="submit-btn-label">提交</view>
+    </view>
+  </view>
+</view>

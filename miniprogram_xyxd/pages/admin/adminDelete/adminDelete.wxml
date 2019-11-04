@@ -1,0 +1,29 @@
+<!--pages/result/result.wxml-->
+<view class='card-box'>
+
+
+  <view class='details' style='border-bottom:1px solid #E3E3E3;margin-top: 200rpx;margin-bottom: : 200rpx;'>
+    <label style=''>被哪些学生选择作为老师：</label>
+    
+  </view>
+  <form bindsubmit="adminDelete">
+   <!-- <input type="text" name="teacherID" value="{{teacherID}}"  maxlength='20' disabled="disabled" /> -->
+  <scroll-view scroll-y="true" style="height: 250px">
+   
+      <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view wx:for="{{student}}" data-index="{{index}}">
+      <label>
+            <radio name ="studentID" value="{{student[index].studentID}}" />{{student[index].studentID}}：{{student[index].studentName}}
+            <!-- <input type="radio" name="teacherID" value="{{student[index].studentID}}"  maxlength='20' disabled="disabled" /> -->
+              </label>
+         </view>
+       
+</radio-group>
+      </view>
+   
+   
+  </scroll-view>
+  <button form-type="submit">删除</button>
+</form>
+</view>

@@ -1,0 +1,30 @@
+.pages{
+  padding-left: 5px;
+}
+.title{ 
+  font-size: 25px;
+  font-style: "黑体";
+  text-align: center;
+  line-height: 40px;
+  padding-top: 15px;
+}
+.picture{
+  padding-top: 10px;
+  width: 98%;
+}
+.date{
+  width: 98%;
+  color: #C0C0C0;
+  text-align: right;
+  height: 30px;
+  line-height: 30px;
+}
+
+.content{
+  line-height: 25px;
+}
+.viewers{
+  color: #C0C0C0;
+  text-align: left;
+  padding-top: 30px
+}

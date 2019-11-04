@@ -1,0 +1,7 @@
+<van-cell title="导师信息" size="large" />
+<van-cell title="姓名" value="{{tutor.name}}" size="large" clickable="true" />
+<van-cell title="学工号" value="{{tutor.id}}" size="large" clickable="true" />
+<van-cell title="学院" value="{{tutor.college}}" size="large" clickable="true" />
+<van-cell title="研究方向" value="{{tutor.study}}" size="large" clickable="true" />
+<van-cell title="招生人数" value="{{tutor.number}}" size="large" clickable="true" />
+<van-cell title="简介" size="large" label="{{tutor.instroduction}}" clickable="true" />

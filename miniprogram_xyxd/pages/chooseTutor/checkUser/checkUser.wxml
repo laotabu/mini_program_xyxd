@@ -1,0 +1,19 @@
+<view class="table" style="height:300px">
+  <view class="labelcs" style="height:30px">个人信息核对:</view>
+  <view class="th" wx:if="{{status==0}}">身份：学生</view>
+  <view class="th">学号：{{id}}</view>
+  <view class="th">学院：{{college}}</view>
+  <view class="" style='margin-top:20px' >
+     <button class=".start-btn" bindtap='goTutor' disabled="{{status==1||isFinish}}">进入选导</button>
+  </view>
+  <view class="" style='margin-top:20px' >
+     <button class=".start-btn" bindtap='goModify'>修改信息</button>
+  </view>
+</view>
+<!--底部导航-->
+<van-tabbar active="{{ active }}" active-color="#07c160" inactive-color="#000" bind:change="onChange">
+  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="orders-o">导师列表</van-tabbar-item>
+  <van-tabbar-item icon="apps-o">开始选导</van-tabbar-item>
+  <van-tabbar-item icon="user-o">我的</van-tabbar-item>
+</van-tabbar>

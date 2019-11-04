@@ -1,0 +1,110 @@
+<!--pages/myItem/modify/index.wxml-->
+<view wx:if="{{status==0}}" class="form-box">
+
+  <view wx:if="{{id == 'stuSex'}}">
+    <form id="normal" name="form" bindsubmit="stuSexModify">
+      <van-cell title="修改性别" />
+      <van-radio-group value="{{radio}}" bind:change="onChange">
+        <van-cell-group>
+          <van-cell title="男" value-class="value-class" clickable data-name="男" bind:click="onClick">
+            <van-radio name="男" />
+          </van-cell>
+          <van-cell title="女" value-class="value-class" clickable data-name="女" bind:click="onClick">
+            <van-radio name="女" />
+          </van-cell>
+        </van-cell-group>
+      </van-radio-group>
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+  </view>
+
+  <view wx:elif="{{id == 'college'}}">
+    <form id="normal" name="form2" bindsubmit="stuCollegeModify">
+
+      <van-cell title="修改院系" />
+
+      <van-cell id="college" name="college" title="院系" value="{{ college }}" is-link bind:click="showPopup" />
+      <van-popup id="college" show="{{ show_college }}" bind:close="onClose" position="bottom">
+        <van-picker id="college" title="院系" columns="{{ collegeColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+  </view>
+  <view wx:elif="{{id == 'major'}}">
+    <form id="normal" name="form2" bindsubmit="stuMajorModify">
+
+      <van-cell title="修改专业" />
+
+      <van-cell id="major" name="major" title="专业" value="{{ major }}" is-link bind:click="showPopup" />
+      <van-popup id="major" show="{{ show_major }}" bind:close="onClose" position="bottom">
+        <van-picker id="major" title="专业" columns="{{ majorColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+  </view>
+
+  <view wx:else>
+    <form id="normal" name="form2" bindsubmit="studentModify">
+      <van-cell title="修改信息" />
+      <van-field name="item" value="" clearable label="{{id}}" placeholder="请输入新内容" />
+    
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+
+  </view>
+
+</view>
+
+<view wx:if="{{status==1}}" class="form-box">
+
+  <view wx:if="{{id == 'tchSex'}}">
+    <form id="normal" name="form" bindsubmit="tchSexModify">
+      <van-cell title="修改性别" />
+      <van-radio-group value="{{radio}}" bind:change="onChange">
+        <van-cell-group>
+          <van-cell title="男" value-class="value-class" clickable data-name="男" bind:click="onClick">
+            <van-radio name="男" />
+          </van-cell>
+          <van-cell title="女" value-class="value-class" clickable data-name="女" bind:click="onClick">
+            <van-radio name="女" />
+          </van-cell>
+        </van-cell-group>
+      </van-radio-group>
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+  </view>
+
+  <view wx:elif="{{id == 'college'}}">
+    <form id="normal" name="form2" bindsubmit="tchCollegeModify">
+
+      <van-cell title="修改院系" />
+
+      <van-cell id="college" name="college" title="院系" value="{{ college }}" is-link bind:click="showPopup" />
+      <van-popup id="college" show="{{ show_college }}" bind:close="onClose" position="bottom">
+        <van-picker id="college" title="院系" columns="{{ collegeColumns }}" show-toolbar bind:cancel="onCancel" bind:confirm="onConfirm" />
+      </van-popup>
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+  </view>
+
+
+
+  <view wx:else>
+    <form id="normal" name="form2" bindsubmit="teacherModify">
+      <van-cell title="修改信息" />
+      <van-field name="item" value="" clearable label="{{id}}" placeholder="请输入新内容" />
+     
+      <button class="sub-button" form-type="submit">提交</button>
+    </form>
+    <van-popup show="{{ show }}" round="true" style="height: 40%" bind:close="onClose">正在提交……</van-popup>
+
+  </view>
+
+</view>

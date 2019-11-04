@@ -1,0 +1,52 @@
+<!--pages/result/result.wxml-->
+<view wx:if="{{isFinish}}">
+
+  <view class='card-box'>
+    <view class='card-info' wx:if="{{flag==1}}">
+
+      <view class='details' style='border-bottom:1px solid #E3E3E3;margin-top: 200rpx;margin-bottom: : 200rpx;'>
+        <label style=''>我被哪些学生选择作为老师：</label>
+      </view>
+      <scroll-view scroll-y="true" style="height: 250px">
+        <view wx:for="{{student}}" data-index="{{index}}">
+          <view class='details' style='border-bottom:1px solid #E3E3E3;'>
+            <label>{{student[index].studentName}}</label>
+          </view>
+        </view>
+      </scroll-view>
+
+    </view>
+
+    <view wx:else class="form-box">
+      <form bindsubmit="teacherPrint">
+        <text class="menus_title">姓名：</text>
+        <input name="name" value="{{teacher.tchName}}" placeholder="姓名" maxlength='16' disabled="disabled" />
+
+        <view class="menus_title">工号：</view>
+        <input type="number" name="id" value="{{teacher.teacherID}}" placeholder="工号" maxlength='12' disabled="disabled" />
+
+        <view class="menus_title">性别：</view>
+        <input type="number" name="id" value="{{teacher.tchSex}}" placeholder="性别" maxlength='12' disabled="disabled" />
+
+
+        <view class="menus_title">研究方向：</view>
+        <input name="detail" value="{{teacher.reDirection}}" placeholder="研究方向" disabled="disabled" />
+
+        <view class="menus_title">学院：</view>
+        <input name="institute" value="{{teacher.college}}" placeholder="学院" disabled="disabled" />
+
+        <view class="menus_title">校区：</view>
+        <input name="school" value="{{teacher.campus}}" placeholder="校区" disabled="disabled" />
+
+        <view class="menus_title">导师简介：</view>
+        <textarea name="introduction" value="{{teacher.introduction}}" placeholder="导师简介" disabled="disabled"></textarea>
+       
+      <input  value="生成专属打印链接（复制后在电脑浏览器打开）："  disabled="disabled" />
+      <!-- <textarea  type="text" value="http://miniprint.ggjsjxh.com/?stuName={{studentPrint.stuName}}&studentID={{studentPrint.studentID}}&stuSex={{studentPrint.stuSex}}&stuCampus={{studentPrint.campus}}&stuInstituteNo={{studentPrint.college}}&major={{studentPrint.major}}&tchName={{teacher.tchName}}&teacherID={{teacher.teacherID}}&tchCampus={{teacher.campus}}&tchInstituteNo={{teacher.college}}"   readonly="readonly" maxlength="100000"> </textarea> -->
+     <input  type="text" value="http://miniprint.ggjsjxh.com/?stuName={{studentPrint.stuName}}&studentID={{studentPrint.studentID}}&stuSex={{studentPrint.stuSex}}&stuCampus={{studentPrint.campus}}&stuInstituteNo={{studentPrint.college}}&major={{studentPrint.major}}&tchName={{teacher.tchName}}&teacherID={{teacher.teacherID}}&tchCampus={{teacher.campus}}&tchInstituteNo={{teacher.college}}"   readonly="readonly" maxlength="100000" />
+     
+      </form>
+    </view>
+
+  </view>
+</view>
