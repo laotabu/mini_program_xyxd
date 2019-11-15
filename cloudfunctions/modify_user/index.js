@@ -10,12 +10,20 @@ exports.main = async (event, context) => {
     try {
       if(event.id == 'studentID')
       {
-        return await db.collection('student').where({
+         db.collection('student').where({
           openID: event.openID,
         }
         ).update({
           data: {
             studentID: event.item
+          }
+        })
+        return await db.collection('user_check').where({
+          openID: event.openID,
+        }
+        ).update({
+          data: {
+            userID: event.item
           }
         })
       }
@@ -43,7 +51,15 @@ exports.main = async (event, context) => {
       }
 
       else if (event.id == 'college') {
-        return await db.collection('student').where({
+         db.collection('student').where({
+          openID: event.openID,
+        }
+        ).update({
+          data: {
+            college: event.item,
+          }
+        })
+        return await db.collection('user_check').where({
           openID: event.openID,
         }
         ).update({
@@ -99,7 +115,7 @@ exports.main = async (event, context) => {
       }
       
       else if (event.id == 'teacherID') {
-        return await db.collection('teacher').where({
+        db.collection('teacher').where({
           openID: event.openID,
         }
         ).update({
@@ -107,7 +123,14 @@ exports.main = async (event, context) => {
             teacherID: event.item,
           }
         })
-
+        return await db.collection('user_check').where({
+          openID: event.openID,
+        }
+        ).update({
+          data: {
+            userID: event.item,
+          }
+        })
       }
       else if (event.id == 'tchName') {
         return await db.collection('teacher').where({
@@ -132,7 +155,15 @@ exports.main = async (event, context) => {
 
       }
       else if (event.id == 'college') {
-        return await db.collection('teacher').where({
+         db.collection('teacher').where({
+          openID: event.openID,
+        }
+        ).update({
+          data: {
+            college: event.item,
+          }
+        })
+        return await db.collection('user_check').where({
           openID: event.openID,
         }
         ).update({
